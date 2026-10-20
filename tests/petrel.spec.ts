@@ -130,13 +130,17 @@ test('reference layout uses light tiled birds, protects the composer, and remain
 });
 test('video frames can be sought in any order without a live animation clock', async ({ page }) => {
   await page.goto('/?view=chat');
-  await page.evaluate(() => (document.querySelector('petrel-background') as any).controller.renderAt(4));
-  const a = await page.locator('petrel-background canvas').screenshot();
-  await page.evaluate(() => {
-    const controller = (document.querySelector('petrel-background') as any).controller;
-    controller.renderAt(8); controller.renderAt(1); controller.renderAt(4);
+  await expect(page.locator('petrel-background canvas')).toBeVisible();
+  const result = await page.evaluate(async () => {
+    await document.fonts.ready;
+    const element = document.querySelector('petrel-background') as any;
+    const controller = element.controller;
+    const canvas = element.shadowRoot.querySelector('canvas') as HTMLCanvasElement;
+    // Compare the engine's pixels, excluding composited DOM text, carets and browser UI.
+    controller.renderAt(4); const a = canvas.toDataURL();
+    controller.renderAt(8); const different = a !== canvas.toDataURL();
+    controller.renderAt(1); controller.renderAt(4);
+    return { same: a === canvas.toDataURL(), different, running: controller.stats.running };
   });
-  const b = await page.locator('petrel-background canvas').screenshot();
-  expect(a.equals(b)).toBe(true);
-  expect(await page.evaluate(() => (document.querySelector('petrel-background') as any).controller.stats.running)).toBe(false);
+  expect(result).toEqual({ same: true, different: true, running: false });
 });
