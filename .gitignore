@@ -1,0 +1,10 @@
+node_modules/
+dist/
+test-results/
+playwright-report/
+.DS_Store
+.hyperframes/
+.thumbnails/
+showcase/renders/
+docs/GOAL-AUDIT.md
+*.zip

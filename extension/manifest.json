@@ -1,0 +1,9 @@
+{
+  "manifest_version": 3,
+  "name": "Agent Petrel · 海燕",
+  "version": "0.1.0",
+  "description": "Click to toggle a quiet ASCII petrel decoration on the current agent webpage. Does not read page text.",
+  "permissions": ["activeTab", "scripting"],
+  "background": { "service_worker": "service-worker.js" },
+  "action": { "default_title": "海燕：开启 / 关闭当前页面装饰层" }
+}

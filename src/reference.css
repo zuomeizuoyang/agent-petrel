@@ -1,0 +1,33 @@
+body.light {color-scheme:light;color:#243659;background:#f6fafb}
+body.light .vignette {background:radial-gradient(ellipse at center,#f3f8fb26,transparent 60%)}
+body.light header {border-color:#294e7012}
+body.light .wordmark,body.light h1,body.light h2 {color:#2e4567}
+body.light .wordmark small,body.light .header-right,body.light .header-right button,body.light footer,body.light footer button {color:#5e7595}
+body.light .panel,body.light dialog,body.light #chat {background:#f9fcfff0;border-color:#5b7d9d27;color:#273c5b;box-shadow:0 20px 80px #477fa414}
+body.light .theme-buttons {background:#e6eef6;border-color:#7799b822}
+body.light .theme-buttons button {color:#5f7c9c}
+body.light .theme-buttons .selected {background:#fff;color:#2c4a85;box-shadow:0 2px 9px #29486810}
+body.light .panel label,body.light #chat p,body.light dialog p {color:#577393}
+body.light .panel output,body.light .tiny,body.light #notice,body.light .eyebrow,body.light .intro p,body.light .intro-bottom {color:#6b87a2}
+body.light .panel select,body.light textarea {background:#fff;color:#345277;border-color:#839bb333}
+body.light .actions button {color:#365781;border-color:#6a89a533}
+body.light input {accent-color:#426bb2}
+body.light #restore {background:#f6fafbd9;color:#41618e;border-color:#41618e44}
+body.light pre {background:#eaf0f7;color:#345778}
+body.light code {color:#4164a1}
+#reference {position:fixed;z-index:2;left:50%;top:50%;transform:translate(-50%,-50%);width:min(560px,78vw);text-align:center}
+.reference-title {font-size:clamp(22px,2.4vw,34px);font-weight:350;letter-spacing:.02em;margin-bottom:25px;color:#c6d8dd}
+.reference-composer {border:1px solid #a1b5c026;border-radius:14px;background:#14202eea;box-shadow:0 20px 70px #0002;padding:16px;text-align:left}
+.reference-composer textarea {font-size:14px;line-height:1.7;min-height:64px;height:64px;width:100%;resize:none;border:0;padding:0;background:transparent;color:inherit}
+.reference-composer textarea:focus-visible {outline:none;box-shadow:none}
+.reference-composer:focus-within {outline:2px solid #879dce;outline-offset:4px}
+.composer-bottom {display:flex;justify-content:space-between;align-items:center;color:#8198ab;font:10px Consolas,monospace}
+#reference>p {font-size:10px;letter-spacing:.08em;color:#7189a0;margin-top:18px}
+body.light .reference-title {color:#344978}
+body.light .reference-composer {background:#ffffffed;border-color:#6f91b514;box-shadow:0 20px 70px #42699d12}
+body.light .reference-composer textarea {background:transparent;color:#3a5478}
+body.reference-mode main {visibility:hidden;pointer-events:none}
+body.reference-mode .vignette {opacity:0}
+body.clean #reference {display:none}
+body.reference-mode footer {background:transparent}
+@media(max-width:720px){body.light footer{background:#f6fafb}body.reference-mode footer{position:fixed;bottom:0}body.reference-mode{overflow:hidden}.header-right{gap:8px}.header-right button{font-size:10px}.wordmark{font-size:14px;gap:6px}.theme-buttons button{padding:8px 5px}#reference{width:84vw}}
