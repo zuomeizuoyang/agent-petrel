@@ -1,6 +1,15 @@
 # 本次验证
 
-日期：2026-10-20。环境：Windows，Node.js v24.14.0，本机 Microsoft Edge，Playwright。
+日期：2026-10-20（原动画与视频）；2026-10-22（Codex 插件）。环境：Windows，Node.js v24.14.0，本机 Microsoft Edge，Playwright。
+
+## v0.2.0 插件验证
+
+- `npm run build` 通过：同时生成 portable `plugin.json`、兼容 `.codex-plugin/plugin.json`、离线 HTML、两种 SDK 和许可证；插件资源已随 Git 仓库提交，使用者无需编译。
+- `npm test`：3 项 Node 集成测试和 9 项 Playwright 测试全部通过。新增覆盖随机端口启动、从不同工作目录启动、实际内置 HTML/SDK、拒绝无关文件/写操作/非本机 Host、参数验证、主题数量调整、暂停和零外部请求。
+- `quick_validate.py`：插件的 `petrel` 技能通过 frontmatter 与结构校验。
+- Codex CLI 0.146.0 可解析 marketplace、安装本插件；侧栏播放由插件内置本地服务器提供。安装成功不代表原生聊天背景已经被替换。
+
+## 原动画验证
 
 `npm run build`：通过 TypeScript 严格检查，生成 Vite 页面、自包含离线 HTML、ES / IIFE SDK、类型声明和 MV3 扩展目录。新增确定性视频定位接口后，IIFE SDK 约 12.30 kB，gzip 约 4.77 kB。
 

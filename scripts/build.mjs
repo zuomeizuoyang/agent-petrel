@@ -22,3 +22,4 @@ const layer = await readFile('extension/layer.js', 'utf8');
 await writeFile('dist/extension/content.js', bundle + '\n' + layer);
 for (const file of ['manifest.json', 'service-worker.js']) await copyFile('extension/' + file, 'dist/extension/' + file);
 console.log('Built: offline preview, ES/IIFE SDK, declarations, opt-in browser extension.');
+await import('./prepare-plugin.mjs');

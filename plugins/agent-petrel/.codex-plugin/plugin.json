@@ -1,0 +1,25 @@
+{
+  "name": "agent-petrel",
+  "version": "0.2.0",
+  "description": "在 Codex 侧栏预览 ASCII 海燕、调整主题与鸟群，并接入自己的 agent 网页。",
+  "author": {
+    "name": "zuomeizuoyang"
+  },
+  "repository": "https://github.com/zuomeizuoyang/agent-petrel",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Agent Petrel · 海燕",
+    "shortDescription": "ASCII 海燕动态背景与网页接入",
+    "longDescription": "离线海燕预览、四种配色、鸟群参数与通用 Canvas SDK。通过 Codex 内置浏览器在侧栏展示，不替换原生主聊天背景。无需 API key 或账号。",
+    "developerName": "zuomeizuoyang",
+    "category": "Productivity",
+    "websiteURL": "https://github.com/zuomeizuoyang/agent-petrel",
+    "defaultPrompt": [
+      "打开海燕动态背景",
+      "把海燕改成月光银，3 只，速度 0.5",
+      "把海燕背景接入这个网页"
+    ],
+    "brandColor": "#3153aa"
+  }
+}

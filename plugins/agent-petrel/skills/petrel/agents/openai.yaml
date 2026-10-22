@@ -1,0 +1,4 @@
+interface:
+  display_name: "海燕动态背景"
+  short_description: "在 Codex 侧栏打开和调整 ASCII 海燕，或将通用动画组件接入自己的网页"
+  default_prompt: "使用 $petrel 打开海燕动态背景。"

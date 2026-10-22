@@ -12,7 +12,18 @@
 
 视频使用项目自身的 DOM、CSS 和 Canvas 引擎，由 HyperFrames 导出。浅色聊天布局、4 只海燕、无声，时长 10 秒。视频展示独立组件效果。
 
-## 先看效果
+## Codex 插件（v0.2.0）
+
+现在也提供可安装插件：内置离线海燕、侧栏启动技能、主题/鸟群调节和通用 SDK，无需 npm install 或 API key（本地启动需 Node.js 20+）。
+
+```sh
+codex plugin marketplace add zuomeizuoyang/agent-petrel
+codex plugin add agent-petrel@agent-petrel
+```
+
+在新聊天中说“用海燕插件打开动态背景”，或“把海燕改成月光银，3 只”。这是 **Codex 侧栏插件**，主聊天背景仍受宿主接口限制。完整安装、离线 ZIP 和使用方式见 [插件说明](plugins/agent-petrel/README.md)。这是 GitHub marketplace 分发，尚未提交官方公共插件目录。
+
+## 网页与离线预览
 
 - 直接用浏览器打开 `dist/petrel-preview.html`：自包含文件，不需要安装依赖。
 - 或运行 `node scripts/serve.mjs`（Windows 可双击 `Start-Petrel.cmd`），访问 `http://127.0.0.1:4187`。仅监听本机，Ctrl+C 停止。

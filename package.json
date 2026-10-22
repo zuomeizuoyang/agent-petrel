@@ -1,6 +1,6 @@
 {
   "name": "agent-petrel",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "ASCII storm petrels for agent interfaces: framework-free Canvas engine and web component",
   "type": "module",
   "license": "MIT",
@@ -19,7 +19,9 @@
     "dev": "vite --host 127.0.0.1",
     "build": "tsc --noEmit && node scripts/build.mjs",
     "preview": "vite preview --host 127.0.0.1",
-    "test": "playwright test",
+    "test": "node --test tests/plugin.test.mjs && playwright test",
+    "plugin:prepare": "node scripts/prepare-plugin.mjs",
+    "plugin:preview": "node plugins/agent-petrel/scripts/preview.mjs --port 0",
     "typecheck": "tsc --noEmit",
     "showcase:prepare": "node scripts/prepare-showcase.mjs",
     "showcase:check": "npm --prefix showcase run check",

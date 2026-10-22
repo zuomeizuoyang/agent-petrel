@@ -1,0 +1,12 @@
+{
+  "name": "agent-petrel",
+  "interface": { "displayName": "Agent Petrel · 海燕" },
+  "plugins": [
+    {
+      "name": "agent-petrel",
+      "source": { "source": "local", "path": "./plugins/agent-petrel" },
+      "policy": { "installation": "AVAILABLE", "authentication": "ON_INSTALL" },
+      "category": "Productivity"
+    }
+  ]
+}
